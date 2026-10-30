@@ -1,0 +1,20 @@
+{
+  "calibrated_on": "2026-09-01",
+  "window_days": 60,
+  "status": "ok",
+  "metrics": {
+    "limit_up_p20": 18,
+    "limit_up_p50": 42,
+    "limit_up_p80": 78,
+    "break_rate_p80": 48,
+    "turnover_ratio_p90": 1.85,
+    "max_board_p20": 2
+  },
+  "thresholds": {
+    "freeze_upper": "涨停≤P20 或 近5日分位≤20%；炸板率≥P80；连板≤2",
+    "ferment_lower": "涨停≥P50 且连板抬升",
+    "climax_warn": "涨停≥P80 或 近5日成交额分位≥90%",
+    "volume_expand_ratio": 2.0
+  },
+  "notes": "示例数据，月度重算后覆盖；样本不足60日时保留上月并标未校准"
+}

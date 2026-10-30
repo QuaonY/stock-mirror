@@ -1,0 +1,26 @@
+{
+  "index_close": {
+    "value": 3250.12,
+    "timestamp": "REPLACE_WITH_CURRENT_ISO8601_TIMESTAMP",
+    "sources": [
+      {"independent_source_id": "tdx", "ok": true, "value": 3250.12, "timestamp": "REPLACE_WITH_CURRENT_ISO8601_TIMESTAMP"},
+      {"independent_source_id": "ifind", "ok": true, "value": 3250.10, "timestamp": "REPLACE_WITH_CURRENT_ISO8601_TIMESTAMP"}
+    ]
+  },
+  "turnover": {
+    "value": 18000.0,
+    "timestamp": "REPLACE_WITH_CURRENT_ISO8601_TIMESTAMP",
+    "sources": [
+      {"independent_source_id": "tdx", "ok": true, "value": 18000.0, "timestamp": "REPLACE_WITH_CURRENT_ISO8601_TIMESTAMP"},
+      {"independent_source_id": "ifind", "ok": true, "value": 18050.0, "timestamp": "REPLACE_WITH_CURRENT_ISO8601_TIMESTAMP"}
+    ]
+  },
+  "limit_up_count": {
+    "value": 42,
+    "timestamp": "REPLACE_WITH_CURRENT_ISO8601_TIMESTAMP",
+    "sources": [
+      {"independent_source_id": "eastmoney", "ok": true, "value": 42, "timestamp": "REPLACE_WITH_CURRENT_ISO8601_TIMESTAMP"},
+      {"independent_source_id": "ifind", "ok": true, "value": 42, "timestamp": "REPLACE_WITH_CURRENT_ISO8601_TIMESTAMP"}
+    ]
+  }
+}

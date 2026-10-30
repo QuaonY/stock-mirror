@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StockMirror Trade Ledger Row",
+  "type": "object",
+  "required": ["symbol", "style", "open_date", "close_date", "gross_pnl_pct", "net_pnl_pct", "discipline_ok"],
+  "properties": {
+    "symbol": {"type": "string"},
+    "style": {"type": "string", "enum": ["短线", "波段", "长线"]},
+    "signal_grade": {"type": "string", "enum": ["S", "A", "B", "C"]},
+    "open_date": {"type": "string", "format": "date"},
+    "close_date": {"type": "string", "format": "date"},
+    "hold_days": {"type": "integer", "minimum": 0},
+    "gross_pnl_pct": {"type": "number"},
+    "cost_pct": {"type": "number"},
+    "net_pnl_pct": {"type": "number"},
+    "stop_hit": {"type": "boolean"},
+    "limit_locked_no_fill": {"type": "boolean", "description": "一字跌停导致无法按止损成交"},
+    "discipline_ok": {"type": "boolean", "description": "是否完全按清单执行"},
+    "notes": {"type": "string"}
+  }
+}

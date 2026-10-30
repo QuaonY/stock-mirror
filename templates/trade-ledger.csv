@@ -1,0 +1,2 @@
+symbol,style,signal_grade,open_date,close_date,hold_days,gross_pnl_pct,cost_pct,net_pnl_pct,stop_hit,limit_locked_no_fill,discipline_ok,notes
+600000,波段,B,2026-09-01,2026-09-10,7,3.20,0.18,3.02,false,false,true,示例行：按清单执行

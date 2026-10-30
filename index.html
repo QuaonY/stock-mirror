@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>StockMirror · 股海镜鉴</title>
+<style>
+  :root {
+    --ink:#1a1a1a; --muted:#666; --line:#e5e5e5; --bg:#f7f7f8; --card:#fff;
+    --accent:#0b7285; --up:#ef232a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:32px;background:var(--bg);color:var(--ink);
+       font:15px/1.65 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+  .wrap{max-width:920px;margin:0 auto}
+  h1{font-size:28px;margin:0 0 8px}
+  .tag{color:var(--muted);font-size:13px;margin-bottom:24px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:14px 0}
+  .card h2{margin:0 0 12px;font-size:17px;border-bottom:1px solid var(--line);padding-bottom:8px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  code,pre{font-family:ui-monospace,Consolas,monospace;font-size:13px}
+  pre{background:#0f172a;color:#e2e8f0;padding:14px 16px;border-radius:10px;overflow:auto}
+  ul{margin:0 0 0 18px;padding:0}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:12px;margin-right:6px}
+  footer{margin-top:28px;color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>StockMirror · 股海镜鉴</h1>
+  <div class="tag">Stock = 股，Mirror = 镜鉴 · 版本 1.3.0 · 作者 Quaon</div>
+
+  <div class="card">
+    <h2>这是什么</h2>
+    <p>A 股每日分析 → 复盘 → 规划 → 选股的可安装 AI Skill。含数据基建互验、六步 SOP、选股漏斗、仓位熔断、HTML 优先报告，以及生产级脚本门禁。</p>
+    <p>
+      <span class="pill">mode A/B/C 门禁</span>
+      <span class="pill">真探活</span>
+      <span class="pill">一键流水线</span>
+      <span class="pill">自动审计</span>
+      <span class="pill">Golden HTML</span>
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>浏览器预览</h2>
+    <ul>
+      <li><a href="examples/good-report.html">Golden 复盘报告样例（应通过 report_lint）</a></li>
+      <li><a href="SKILL.md">SKILL.md</a></li>
+      <li><a href="CHANGELOG.md">CHANGELOG</a></li>
+      <li><a href="references/09-hard-gates-trust.md">硬门禁 G1–G8</a></li>
+      <li><a href="assets/icon.jpg">技能图标 icon.jpg</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>一键流水线示例</h2>
+    <pre>python scripts/run_pipeline.py \
+  --available "tdx,ifind,eastmoney" \
+  --probe-file examples/probe-file.example.json \
+  --market-data examples/market-data.example.json \
+  --tickers examples/tickers.example.json \
+  --report examples/good-report.html</pre>
+    <p class="muted" style="color:var(--muted);font-size:13px">运行前请将 JSON 样例中的占位时间戳更新为真实拉取时间，并配置账户状态与风险画像。输出：state/pipeline/YYYY-MM-DD_summary.json + state/audit/</p>
+  </div>
+
+  <div class="card">
+    <h2>安装</h2>
+    <ul>
+      <li>WorkBuddy：先按 README 的安全打包步骤生成并上传 <code>dist/StockMirror.zip</code></li>
+      <li>本地技能目录：使用安全分发包，或复制不含本地状态数据的 Skill 文件到 <code>~/.claude/skills/stock-mirror/</code></li>
+    </ul>
+  </div>
+
+  <footer>本框架不构成任何投资建议。数据不足如实标注，禁止编造。</footer>
+</div>
+</body>
+</html>

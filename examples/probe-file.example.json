@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "name": "tdx",
+      "independent_source_id": "tdx",
+      "ok": true,
+      "sample_field": "index_change_pct",
+      "sample_value": 0.12,
+      "sample_timestamp": "REPLACE_WITH_CURRENT_ISO8601_TIMESTAMP"
+    },
+    {
+      "name": "ifind",
+      "independent_source_id": "ifind",
+      "ok": true,
+      "sample_field": "index_change_pct",
+      "sample_value": 0.12,
+      "sample_timestamp": "REPLACE_WITH_CURRENT_ISO8601_TIMESTAMP"
+    }
+  ]
+}

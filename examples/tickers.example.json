@@ -1,0 +1,41 @@
+[
+  {
+    "symbol": "000001",
+    "sector": "示例行业",
+    "entry": 10.0,
+    "entry_sources": [
+      {
+        "independent_source_id": "tdx",
+        "ok": true,
+        "value": 10.0,
+        "timestamp": "REPLACE_WITH_CURRENT_ISO8601_TIMESTAMP"
+      },
+      {
+        "independent_source_id": "ifind",
+        "ok": true,
+        "value": 10.005,
+        "timestamp": "REPLACE_WITH_CURRENT_ISO8601_TIMESTAMP"
+      }
+    ],
+    "stop": 9.4,
+    "style": "波段",
+    "l4_calibrated": true,
+    "reverse_signal_conflict": false,
+    "plan_complete": true,
+    "current_stock_exposure_pct": 0.0,
+    "current_sector_exposure_pct": 0.0,
+    "current_total_exposure_pct": 0.0,
+    "total_position_cap_pct": 70.0,
+    "is_limit_up_board": false,
+    "adx": 32,
+    "turnover_20d_avg_yi": 12,
+    "flags": {
+      "gmma_bull": true,
+      "gmma_dispersion": true,
+      "above_cloud": true,
+      "tenkan_gt_kijun": true,
+      "tk_golden": false,
+      "cloud_thick": false
+    }
+  }
+]

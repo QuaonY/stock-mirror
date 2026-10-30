@@ -1,0 +1,14 @@
+{
+  "as_of": null,
+  "peak_nav": 100.0,
+  "current_nav": 100.0,
+  "drawdown_pct": 0.0,
+  "consecutive_stop_losses": 0,
+  "week_pnl_pct": 0.0,
+  "month_pnl_pct": 0.0,
+  "halt_new_open_until": null,
+  "halt_reason": null,
+  "position_scale": 1.0,
+  "base_position_scale": 1.0,
+  "last_reset_month": null
+}

@@ -1,0 +1,13 @@
+{
+  "risk_level": "稳健",
+  "account_type": "模拟",
+  "per_trade_risk_pct": 1.0,
+  "single_stock_cap_pct": 15,
+  "sector_cap_pct": 30,
+  "allow_short_line": true,
+  "allow_limit_up_board": false,
+  "preferred_style": "波段",
+  "output_mode": "full",
+  "benchmark": "沪深300",
+  "notes": "示例：先用模拟盘校准 4 周再上实盘；禁止打板以降低一字跌停无法止损风险"
+}

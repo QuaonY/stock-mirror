@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>StockMirror · 股海镜鉴 · Golden Sample 2026-09-10</title>
+<style>
+  :root {
+    --up: #ef232a;
+    --down: #14b143;
+    --ink: #1a1a1a;
+    --muted: #666;
+    --line: #e5e5e5;
+    --bg: #f7f7f8;
+    --card: #fff;
+    --warn-bg: #fff7e6;
+    --warn-border: #ffd591;
+    --ok: #2f9e44;
+    --bad: #e03131;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px;
+    font: 14px/1.6 -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    color: var(--ink); background: var(--bg);
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  header.brand {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 12px 0 20px; border-bottom: 2px solid var(--ink);
+  }
+  header.brand h1 { margin: 0; font-size: 22px; font-weight: 700; }
+  header.brand .sub { color: var(--muted); font-size: 12px; }
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 999px;
+    font-size: 12px; border: 1px solid var(--ok); color: var(--ok); background: #fff;
+  }
+  .warn {
+    background: var(--warn-bg); border: 1px solid var(--warn-border);
+    border-radius: 8px; padding: 12px 14px; margin: 16px 0;
+  }
+  .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0; }
+  .kpi {
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 12px 14px;
+  }
+  .kpi .k { color: var(--muted); font-size: 12px; }
+  .kpi .v { font-size: 18px; font-weight: 700; margin-top: 4px; }
+  .up { color: var(--up); }
+  .down { color: var(--down); }
+  .miss { color: var(--muted); background: #f1f3f5; padding: 0 4px; border-radius: 4px; }
+  section {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 16px 18px; margin: 14px 0;
+  }
+  section h2 {
+    margin: 0 0 12px; font-size: 16px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--line);
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { background: #fafafa; font-weight: 600; }
+  ul { margin: 8px 0 0 18px; padding: 0; }
+  .muted { color: var(--muted); }
+  footer {
+    margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 12px;
+  }
+  @media (max-width: 720px) { .kpis { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="brand">
+    <div>
+      <h1>StockMirror · 股海镜鉴</h1>
+      <div class="sub">以市场为镜，鉴往知来 · Golden Sample 复盘报告</div>
+    </div>
+    <div class="sub">
+      2026-09-10
+      · <span class="badge">模式 A · MCP互验</span>
+      · v1.3.0
+    </div>
+  </header>
+
+  <div class="warn">
+    <strong>【数据源状态】</strong>
+    已连接行情 MCP：通达信、同花顺iFinD、东方财富妙想（N=3）；
+    模式：A MCP互验；
+    探活：通过（公开行情样例字段可达）；
+    冲突/缺失：上证/深证/成交额/涨停数双源一致；北向实时数据不可得（规则变更），跳过该项。
+    （本文件为 <strong>golden 样例</strong>，数字仅用于演示格式与门禁，不构成投资建议。）
+  </div>
+
+  <section>
+    <h2>元信息</h2>
+    <div class="kpis">
+      <div class="kpi"><div class="k">数据可信度</div><div class="v">高</div></div>
+      <div class="kpi"><div class="k">账户熔断</div><div class="v">正常</div></div>
+      <div class="kpi"><div class="k">情绪阈值校准日</div><div class="v">2026-09-01</div></div>
+    </div>
+    <p class="muted">用户画像：稳健 · 单笔风险 1% · 单票上限 15% · 禁止打板 · 输出 full · 基准 沪深300</p>
+  </section>
+
+  <section>
+    <h2>五维速览</h2>
+    <div class="kpis">
+      <div class="kpi"><div class="k">大盘</div><div class="v">中性偏强</div></div>
+      <div class="kpi"><div class="k">量能</div><div class="v">平量略放</div></div>
+      <div class="kpi"><div class="k">情绪阶段</div><div class="v">发酵</div></div>
+      <div class="kpi"><div class="k">主线</div><div class="v">AI算力 / 出海制造</div></div>
+      <div class="kpi"><div class="k">建议总仓位</div><div class="v">40–70%</div></div>
+      <div class="kpi"><div class="k">开仓基调</div><div class="v">均衡·只做主线</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>步骤1 · 宏观与消息</h2>
+    <ul>
+      <li>大势定性：中性偏多（判断依据：量能温和修复 + 主线资金聚集；判断，非数据）</li>
+      <li>关键消息1：相关部门强调算力基础设施投入（来源：财联社，2026-09-10；可信度：高）</li>
+      <li>关键消息2：离岸人民币日内波动收敛（来源：公开行情，2026-09-10；可信度：中）</li>
+      <li>传导路径：海外算力链情绪 → A股 AI 硬件/光模块 → 应用端跟风</li>
+      <li>主线候选：1) AI算力 2) 出海制造</li>
+      <li>风险事件：海外波动率抬升；月末流动性收紧观察</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>步骤2 · 大盘与指数</h2>
+    <table>
+      <tr><th>指数</th><th>涨跌</th><th>成交额</th><th>来源/备注</th></tr>
+      <tr><td>上证</td><td class="up">+0.42%</td><td>—</td><td>（来源：东财+通达信一致，2026-09-10收盘；可信度：高）</td></tr>
+      <tr><td>深证</td><td class="up">+0.61%</td><td>—</td><td>（来源：东财+同花顺一致；可信度：高）</td></tr>
+      <tr><td>创业板</td><td class="up">+0.88%</td><td>—</td><td>（来源：东财+同花顺一致；可信度：高）</td></tr>
+      <tr><td>两市成交额</td><td colspan="2">9860 亿</td><td>（来源：东财；可信度：高）vs20日均量略放</td></tr>
+    </table>
+    <ul>
+      <li>量价定性：上涨+量能温和，存量偏增量（来源：东财成交额；可信度：高）</li>
+      <li>情绪：涨停 64 / 跌停 12 / 最高连板 5 / 炸板率 32%（来源：东财；可信度：高）</li>
+      <li>情绪阶段：发酵（对照本机校准表 2026-09-01：涨停≥P50 且连板抬升）</li>
+      <li>仓位闸门：40–70%（结构性震荡上沿）</li>
+      <li>北向：实时数据不可得（规则变更），跳过该项</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>步骤3 · 板块与资金</h2>
+    <table>
+      <tr><th>主线</th><th>逻辑</th><th>持续性</th><th>龙头/中军</th><th>阶段</th><th>证据（资金/涨停）</th></tr>
+      <tr>
+        <td>AI算力</td><td>产业投入+海外映射</td><td>中高，催化密</td><td>示例A / 示例B</td><td>加速</td>
+        <td>主力净流入行业TOP1（来源：东财口径；可信度：高）；板块涨停占比高</td>
+      </tr>
+      <tr>
+        <td>出海制造</td><td>订单与汇率企稳</td><td>中</td><td>示例C</td><td>启动</td>
+        <td>概念资金净流入TOP3（来源：东财口径；可信度：中）</td>
+      </tr>
+    </table>
+    <p class="muted">主力净流入 TOP：电子/通信/机械（来源：东财；可信度：高）· 北向：不可得，跳过</p>
+  </section>
+
+  <section>
+    <h2>步骤4 · 个股与技术</h2>
+    <p class="muted">持仓与主线候选逐只诊断；技术分由 scripts/tech_score.py，首仓由 scripts/position_calc.py。</p>
+    <table>
+      <tr>
+        <th>代码名称</th><th>风格</th><th>逻辑</th><th>技术分</th><th>信号</th>
+        <th>止损</th><th>距离%</th><th>首仓%</th><th>最差情景/证伪</th>
+      </tr>
+      <tr>
+        <td>600XXX 示例持仓</td><td>波段</td><td>AI算力中军</td><td>85</td><td>A</td>
+        <td>9.70</td><td>6.0</td><td>15.0</td>
+        <td>放量跌破20日线且板块退潮→清仓；业绩不及预期→不等止损</td>
+      </tr>
+      <tr>
+        <td>000YYY 主线候选</td><td>波段</td><td>出海制造</td><td>72</td><td>B</td>
+        <td>12.10</td><td>7.0</td><td>观察，等确认</td>
+        <td>冲高回落破5日线→放弃；升A前不开仓</td>
+      </tr>
+      <tr>
+        <td>300ZZZ 跟风</td><td>短线</td><td>情绪跟风</td><td><span class="miss">【缺失】</span></td><td>C</td>
+        <td>—</td><td>—</td><td>0</td>
+        <td>未过流动性/技术门槛，仅观察</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>步骤5 · 心态与纪律</h2>
+    <ul>
+      <li>情绪剥离：无追高恐慌单（判断，非数据）</li>
+      <li>计划执行：按昨日清单执行 B 级观察升级，未计划外开仓</li>
+      <li>扛单：无</li>
+      <li>成功/失败各 1 条：成功——主线判断与资金一致；失败——跟风票技术分未达 A 仍列入观察过久</li>
+      <li>今日 3 行心得：执行计划 / 资金与涨停结构共振 / 下次更早剔除 C 级噪音</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>步骤6 · 明日策略</h2>
+    <p><strong>操作基调：</strong>均衡，只做主线，禁止打板（画像：allow_limit_up_board=false）</p>
+    <p class="muted">熔断：allow_new_open=true · position_scale=1.0 · mode=A 允许买入清单</p>
+    <table>
+      <tr>
+        <th>代码</th><th>动作</th><th>买入区间</th><th>止损</th>
+        <th>加仓</th><th>止盈1</th><th>止盈2</th><th>一字跌停预案</th>
+      </tr>
+      <tr>
+        <td>600XXX</td><td>持有/回踩加仓</td><td>10.20~10.40</td><td>9.70</td>
+        <td>放量站稳10.50</td><td>11.20 减1/3</td><td>破位或逻辑证伪清仓</td><td>次日集合竞价优先减</td>
+      </tr>
+      <tr>
+        <td>000YYY</td><td>观察</td><td>—</td><td>—</td>
+        <td>升A且双源确认后可议</td><td>—</td><td>—</td><td>—</td>
+      </tr>
+    </table>
+    <p class="muted">绝对禁区：非主线跟风接力；熔断触发后的任何新开仓；无来源数字驱动的交易。</p>
+  </section>
+
+  <section>
+    <h2>五维市场总结</h2>
+    <ol>
+      <li>整体市场：中性偏强，情绪发酵，建议总仓位 40–70%。</li>
+      <li>资金特点：主力集中电子/通信（来源：东财；可信度：高）；北向不可得跳过。</li>
+      <li>板块特点：AI算力加速、出海制造启动，跟风分化。</li>
+      <li>个股特点：涨停 64、跌停 12、最高连板 5，赚钱效应主要在主线。</li>
+      <li>技术特点：主要指数收阳，量能温和；候选票 A 级 1 只、B 级观察 1 只。</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p><strong>格言：</strong>抓住主线，远离噪音</p>
+    <p>StockMirror · 股海镜鉴 — 本报告为分析与学习框架示例，不构成任何投资建议。市场有风险，投资需谨慎。报告内个股代码与价格均为样例虚构，仅用于验证输出规范。</p>
+  </footer>
+
+</div>
+</body>
+</html>

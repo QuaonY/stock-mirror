@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StockMirror User Risk Profile",
+  "type": "object",
+  "required": ["risk_level", "per_trade_risk_pct", "single_stock_cap_pct", "allow_short_line"],
+  "properties": {
+    "risk_level": {"type": "string", "enum": ["保守", "稳健", "积极"]},
+    "account_type": {"type": "string", "enum": ["模拟", "实盘"]},
+    "per_trade_risk_pct": {"type": "number", "minimum": 0.1, "maximum": 2.0},
+    "single_stock_cap_pct": {"type": "number", "minimum": 5, "maximum": 20},
+    "sector_cap_pct": {"type": "number", "minimum": 10, "maximum": 40},
+    "allow_short_line": {"type": "boolean"},
+    "allow_limit_up_board": {"type": "boolean", "description": "是否允许打板/排板"},
+    "preferred_style": {"type": "string", "enum": ["短线", "波段", "长线", "混合"]},
+    "output_mode": {"type": "string", "enum": ["full", "summary", "plan-only"]},
+    "benchmark": {"type": "string", "enum": ["沪深300", "中证1000", "万得全A"]},
+    "notes": {"type": "string"}
+  }
+}

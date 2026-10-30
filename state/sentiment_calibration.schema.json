@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StockMirror Sentiment Calibration",
+  "type": "object",
+  "required": ["calibrated_on", "window_days", "metrics", "thresholds"],
+  "properties": {
+    "calibrated_on": {"type": "string", "format": "date"},
+    "window_days": {"type": "integer", "minimum": 20},
+    "status": {"type": "string", "enum": ["ok", "insufficient_sample", "extreme_trend_keep_last"]},
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "limit_up_p20": {"type": "number"},
+        "limit_up_p50": {"type": "number"},
+        "limit_up_p80": {"type": "number"},
+        "break_rate_p80": {"type": "number"},
+        "turnover_ratio_p90": {"type": "number"},
+        "max_board_p20": {"type": "number"}
+      }
+    },
+    "thresholds": {
+      "type": "object",
+      "properties": {
+        "freeze_upper": {"type": "string"},
+        "ferment_lower": {"type": "string"},
+        "climax_warn": {"type": "string"},
+        "volume_expand_ratio": {"type": "number"}
+      }
+    },
+    "notes": {"type": "string"}
+  }
+}
